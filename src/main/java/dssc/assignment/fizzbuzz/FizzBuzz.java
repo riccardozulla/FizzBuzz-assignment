@@ -13,4 +13,8 @@ public class FizzBuzz {
       System.out.println(test.isEmpty() ? i : test);
     }
   }
+
+  public String convert(int number) {
+    return "1";
+  }
 }

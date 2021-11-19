@@ -1,5 +1,9 @@
 package dssc.assignment.fizzbuzz;
 
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 public class FizzBuzz {
 
   public static void main(String... args) {
@@ -25,5 +29,9 @@ public class FizzBuzz {
       return "Fizz";
     }
     return Integer.toString(number);
+  }
+  public void print() {
+    Stream<String> FizzBuzzes = IntStream.range(1, 101).mapToObj(this::convert);
+    System.out.println(FizzBuzzes.collect(Collectors.joining(", ")));
   }
 }

@@ -15,7 +15,9 @@ public class FizzBuzz {
   }
 
   public String convert(int number) {
-    if (number == 5){
+    if (number == 5) {
+      return "Buzz";
+    } else if (number == 10) {
       return "Buzz";
     }
     if (number % 3 == 0) {

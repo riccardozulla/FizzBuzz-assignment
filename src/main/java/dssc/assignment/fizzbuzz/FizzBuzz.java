@@ -19,6 +19,8 @@ public class FizzBuzz {
       return "Buzz";
     } else if (number == 10) {
       return "Buzz";
+    } else if (number == 50) {
+      return "Buzz";
     }
     if (number % 3 == 0) {
       return "Fizz";

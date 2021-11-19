@@ -15,8 +15,6 @@ public class PrintToStandardOutput {
     System.setOut(new PrintStream(fakeStandardOutput));
     FizzBuzz fizzBuzz = new FizzBuzz();
     fizzBuzz.print();
-    
-    
 
     Assertions.assertEquals(FIZZBUZZ_TEST, fakeStandardOutput.toString());
   }

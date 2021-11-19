@@ -9,7 +9,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 public class Convert {
 
   @ParameterizedTest
-  @CsvSource({"1, 1", "2, 2", "40, 40"})
+  @CsvSource({"1, 1", "2, 2", "41, 41"})
   void multiple_of_3_and_5(int number, String expected) {
     FizzBuzz fizzBuzz = new FizzBuzz();
     Assertions.assertEquals(expected, fizzBuzz.convert(number));
@@ -26,7 +26,6 @@ public class Convert {
   @ValueSource(ints = {5, 10, 50})
   void multiple_of_5_to_Buzz(int number) {
     FizzBuzz fizzBuzz = new FizzBuzz();
-
     Assertions.assertEquals("Buzz", fizzBuzz.convert(number));
   }
 }

@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 public class Convert {
 
@@ -14,21 +15,10 @@ public class Convert {
     Assertions.assertEquals(expected, fizzBuzz.convert(number));
   }
 
-  @Test
-  void number_3_to_Fizz() {
+  @ParameterizedTest
+  @ValueSource(ints = {3, 6, 27})
+  void numbers_divisible_by_3_to_Fizz(int number) {
     FizzBuzz fizzBuzz = new FizzBuzz();
-    Assertions.assertEquals("Fizz", fizzBuzz.convert(3));
-  }
-
-  @Test
-  void number_6_to_Fizz() {
-    FizzBuzz fizzBuzz = new FizzBuzz();
-    Assertions.assertEquals("Fizz", fizzBuzz.convert(6));
-  }
-
-  @Test
-  void number_27_to_Fizz() {
-    FizzBuzz fizzBuzz = new FizzBuzz();
-    Assertions.assertEquals("Fizz", fizzBuzz.convert(27));
+    Assertions.assertEquals("Fizz", fizzBuzz.convert(number));
   }
 }

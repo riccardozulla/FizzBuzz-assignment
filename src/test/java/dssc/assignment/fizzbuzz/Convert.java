@@ -22,20 +22,11 @@ public class Convert {
     Assertions.assertEquals("Fizz", fizzBuzz.convert(number));
   }
 
-  @Test
-  void number_5_to_Buzz() {
+  @ParameterizedTest
+  @ValueSource(ints = {5, 10, 50})
+  void multiple_of_5_to_Buzz(int number) {
     FizzBuzz fizzBuzz = new FizzBuzz();
-    Assertions.assertEquals("Buzz", fizzBuzz.convert(5));
-  }
-  @Test
-  void number_10_to_Buzz() {
-    FizzBuzz fizzBuzz = new FizzBuzz();
-    Assertions.assertEquals("Buzz", fizzBuzz.convert(10));
-  }
 
-  @Test
-  void number_50_to_Buzz() {
-    FizzBuzz fizzBuzz = new FizzBuzz();
-    Assertions.assertEquals("Buzz", fizzBuzz.convert(50));
+    Assertions.assertEquals("Buzz", fizzBuzz.convert(number));
   }
 }

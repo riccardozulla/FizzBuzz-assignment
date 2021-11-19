@@ -15,9 +15,11 @@ public class FizzBuzz {
   }
 
   public String convert(int number) {
-    if(number == 3){
+    if (number == 3) {
       return "Fizz";
-    } else if (number == 6){
+    } else if (number == 6) {
+      return "Fizz";
+    } else if (number == 27) {
       return "Fizz";
     }
     return Integer.toString(number);

@@ -10,25 +10,29 @@ public class FizzBuzz {
     int upperBound = 105;
     for (int i = 1; i < upperBound; ++i) {
       String test = "";
-      test += i % 3 == 0 ? "Fizz" : "";
-      test += i % 5 == 0 ? "Buzz" : "";
-      test += i % 7 == 0 ? "Bang" : "";   //added for extended version
+      test += isMultipleOf(i, 3) ? "Fizz" : "";
+      test += isMultipleOf(i, 5) ? "Buzz" : "";
+      test += isMultipleOf(i, 7) ? "Bang" : "";   //added for extended version
 
       System.out.println(test.isEmpty() ? i : test);
     }
   }
 
   public String convert(int number) {
-    if (number % 15 == 0) {
+    if (isMultipleOf(number, 15)) {
       return "FizzBuzz";
     }
-    if (number % 5 == 0) {
+    if (isMultipleOf(number, 5)) {
       return "Buzz";
     }
-    if (number % 3 == 0) {
+    if (isMultipleOf(number, 3)) {
       return "Fizz";
     }
     return Integer.toString(number);
+  }
+
+  private static boolean isMultipleOf(int number, int i) {
+    return number % i == 0;
   }
 
   public void print() {
